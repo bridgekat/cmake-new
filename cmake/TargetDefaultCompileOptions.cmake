@@ -56,10 +56,10 @@ function (target_default_compile_options TARGET)
 
   # Standard library debug checks.
   if (${PROJECT_OPTION_PREFIX}_ENABLE_GLIBCXX_DEBUG_CHECKS)
-    target_compile_definitions  (${TARGET} PRIVATE "-D_GLIBCXX_ASSERTIONS")
-    target_compile_definitions  (${TARGET} PRIVATE "-D_GLIBCXX_CONCEPT_CHECKS")
-    target_compile_definitions  (${TARGET} PRIVATE "$<$<CONFIG:Debug>:-D_GLIBCXX_DEBUG>")
-    target_compile_definitions  (${TARGET} PRIVATE "$<$<CONFIG:Debug>:-D_GLIBCXX_DEBUG_PEDANTIC>")
+    target_compile_definitions  (${TARGET} PRIVATE "_GLIBCXX_ASSERTIONS")
+    target_compile_definitions  (${TARGET} PRIVATE "_GLIBCXX_CONCEPT_CHECKS")
+    target_compile_definitions  (${TARGET} PRIVATE "$<$<CONFIG:Debug>:_GLIBCXX_DEBUG>")
+    target_compile_definitions  (${TARGET} PRIVATE "$<$<CONFIG:Debug>:_GLIBCXX_DEBUG_PEDANTIC>")
   endif ()
 
   # ASan.
