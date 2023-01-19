@@ -11,7 +11,7 @@ project (
 
 # ***** Edit to match the directory of `prelude`.
 list (PREPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/extern/prelude/cmake")
-include (Prelude)
+include (Prelude NO_POLICY_SCOPE)
 
 # ===== Dependencies =====
 

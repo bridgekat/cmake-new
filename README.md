@@ -1,6 +1,6 @@
 # Prelude
 
-C++ project template. Currently requires CMake 3.15+. Default standard is C++23.
+C++ project template. Currently requires CMake 3.15+. Default standard is C++20.
 
 ```sh
 # Add to empty Git repository.
