@@ -1,10 +1,10 @@
-string (TOUPPER ${PROJECT_NAME} PROJECT_OPTION_PREFIX)
+string (TOUPPER ${PROJECT_NAME} PREFIX)
 
 # All options provided through this file.
-option (${PROJECT_OPTION_PREFIX}_ENABLE_CODE_ANALYSIS "Run code analysis with cppcheck" OFF)
+option (${PREFIX}_ENABLE_CODE_ANALYSIS "Run code analysis with cppcheck" OFF)
 
 # See: https://stackoverflow.com/questions/56957172/cmake-conditionally-run-cppcheck
-if (${PROJECT_OPTION_PREFIX}_ENABLE_CODE_ANALYSIS)
+if (${PREFIX}_ENABLE_CODE_ANALYSIS)
   find_program (cppcheck cppcheck)
   if (cppcheck MATCHES "NOTFOUND")
     message (STATUS "Cppcheck executable not found.")

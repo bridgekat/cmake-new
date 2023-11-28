@@ -1,22 +1,16 @@
-# Prelude
+# C++ template
 
-C++ project template. Currently requires CMake 3.15+. Default standard is C++20.
+Shared template for all my personal C++ projects.
 
-```sh
-# Add to empty Git repository.
-git init
-git submodule add https://github.com/bridgekat/prelude extern/prelude
+Currently requires CMake 3.28+ and C++23.
 
-# Copy initial files (not necessary; or directly include CMake scripts from `cmake/`.)
-sh extern/prelude/misc/init.sh
+## Getting started
 
-# Edit `CMakeLists.txt`.
-```
+Replace across the project all occurrences of `the_project_name` to a desired project name. This can be done manually.
 
-See: [https://cliutils.gitlab.io/modern-cmake/](https://cliutils.gitlab.io/modern-cmake/)
+Build commands:
 
 ```sh
-# Configure and build.
 cmake -S . -B build
-cmake --build build -j 4
+cmake --build build
 ```
