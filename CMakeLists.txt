@@ -1,9 +1,5 @@
-cmake_minimum_required (VERSION 3.27)
+cmake_minimum_required (VERSION 3.28)
 cmake_policy (SET CMP0135 NEW)
-
-# TODO: remove in CMake 3.28
-set (CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API "aa1f7df0-828a-4fcd-9afc-2dc80491aca7")
-set (CMAKE_EXPERIMENTAL_CXX_MODULE_DYNDEP 1)
 
 # TODO: edit for project.
 project (the_project_name
