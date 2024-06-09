@@ -21,7 +21,8 @@ include (CppcheckCodeAnalysis)
 add_library (the_project_name)
 target_sources (the_project_name
   PUBLIC FILE_SET cxx_modules TYPE CXX_MODULES FILES
-  "src/the_project_name.cpp"
+  "src/match.cpp"
+  "src/allocator.cpp"
 )
 target_default_compile_options (the_project_name)
 

@@ -6,7 +6,7 @@ Currently requires CMake 3.28+ and C++23.
 
 ## Getting started
 
-Replace across the project all occurrences of `the_project_name` to a desired project name. This can be done manually.
+In `CMakeLists.txt`, replace all occurrences of `the_project_name` to a desired project name. This can be done manually.
 
 Build commands:
 
