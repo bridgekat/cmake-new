@@ -21,15 +21,20 @@ include (CppcheckCodeAnalysis)
 add_library (the_project_name)
 target_sources (the_project_name
   PUBLIC FILE_SET cxx_modules TYPE CXX_MODULES FILES
-  "src/match.cpp"
+  "src/matcher.cpp"
   "src/allocator.cpp"
 )
 target_default_compile_options (the_project_name)
 
-add_executable (simple_test tests/simple_test.cpp)
+add_executable (simple_test "tests/simple_test.cpp")
 target_link_libraries (simple_test PRIVATE the_project_name)
 target_default_compile_options (simple_test)
+
+add_executable (cmdline_test "tests/cmdline_test.cpp")
+target_link_libraries (cmdline_test PRIVATE the_project_name)
+target_default_compile_options (cmdline_test)
 
 # ===== Tests =====
 enable_testing ()
 add_test (simple_test simple_test)
+add_test (cmdline_test cmdline_test)

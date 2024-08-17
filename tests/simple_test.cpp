@@ -6,8 +6,8 @@
 import allocator;
 using allocator::Allocator;
 
-import match;
-using match::match;
+import matcher;
+using matcher::match;
 
 struct Thing {
   std::string first;
