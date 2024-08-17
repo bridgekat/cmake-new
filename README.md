@@ -2,7 +2,7 @@
 
 Shared template for all my personal C++ projects.
 
-Currently requires CMake 3.28+ and C++23.
+Currently requires CMake 3.28+ and C++26.
 
 ## Getting started
 

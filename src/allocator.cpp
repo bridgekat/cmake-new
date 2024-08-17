@@ -6,8 +6,8 @@ module;
 export module allocator;
 export namespace allocator {
 
-//! A simple region-based memory allocator (uses larger blocks than `std::deque`).
-//! This ensures the allocated objects to stay in the same place, like in `std::deque`.
+/// A simple region-based memory allocator (uses larger blocks than `std::deque`).
+/// This ensures the allocated objects to stay in the same place, like in `std::deque`.
 template <typename T>
 class Allocator {
 public:
@@ -41,7 +41,7 @@ public:
     swap(l._next, r._next);
   }
 
-  //! Constructs new object with arguments passed to a constructor of `T`.
+  /// Constructs new object with arguments passed to a constructor of `T`.
   template <typename... Ts>
   auto emplace(Ts&&... args) -> T* {
     if (_next == 0)
@@ -54,14 +54,14 @@ public:
     return res;
   }
 
-  //! Destructs all objects.
+  /// Destructs all objects.
   void clear() {
     _deallocate();
     _blocks.clear();
     _next = 0;
   }
 
-  //! Returns the number of allocated objects.
+  /// Returns the number of allocated objects.
   auto size() const -> std::size_t {
     if (_next == 0)
       return _block_size * _blocks.size();

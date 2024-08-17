@@ -6,8 +6,8 @@
 import allocator;
 using allocator::Allocator;
 
-import match;
-using match::match;
+import matcher;
+using matcher::match;
 
 struct Thing {
   std::string first;
@@ -16,7 +16,7 @@ struct Thing {
 
 auto main() -> int {
   auto alloc = Allocator<Thing>();
-  auto p = alloc.emplace(Thing{"Hello", 233});
+  auto p = alloc.emplace(Thing{.first = "Hello", .second = 233});
   assert(std::format("{} {}", p->first, p->second) == "Hello 233");
   return 0;
 }
